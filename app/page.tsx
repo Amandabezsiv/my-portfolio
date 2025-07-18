@@ -78,36 +78,36 @@ export default function Portfolio() {
 
   const projects = [
     {
-      title: 'E-commerce API',
+      title: 'Weather Gateway API (MCP-Enabled)',
       description:
-        'RESTful API for e-commerce platform with user authentication, product management, and payment integration.',
-      technologies: ['Django', 'PostgreSQL', 'Docker', 'AWS'],
-      github: 'https://github.com/Amandabezsiv',
-      demo: 'https://github.com/Amandabezsiv',
+        'Microservices-based API Gateway for weather data, favorites, and alerts, with OAuth2 authentication. Can be accessed by LLMs via MCP.',
+      technologies: ['FastAPI', 'Docker', 'OAuth2'],
+      github: 'https://github.com/Amandabezsiv/climatewatch-gateway',
+      demo: 'https://github.com/Amandabezsiv/climatewatch-gateway',
     },
     {
-      title: 'Task Management App',
+      title: 'Application Performance Monitoring System',
       description:
-        'Full-stack task management application with real-time updates and team collaboration features.',
-      technologies: ['React', 'FastAPI', 'MySQL', 'Docker'],
-      github: 'https://github.com/Amandabezsiv',
-      demo: 'https://github.com/Amandabezsiv',
+        'Performance Monitoring App is a system designed to track, monitor, and visualize key application performance metrics such as response time, CPU and memory usage, active sessions, and page load time. It features an alerting system managed through the Django admin panel and supports report generation with graphical data representation.',
+      technologies: ['Django', 'HTML5', 'CSS', 'MongoDB'],
+      github: 'https://github.com/Amandabezsiv/app_performance_monitoring',
+      demo: 'https://github.com/Amandabezsiv/app_performance_monitoring',
     },
     {
-      title: 'Data Analytics Dashboard',
+      title: 'Crypto Dashboard',
       description:
-        'Interactive dashboard for data visualization and analytics with real-time data processing.',
-      technologies: ['Python', 'React', 'PostgreSQL', 'AWS'],
-      github: 'https://github.com/Amandabezsiv',
-      demo: 'https://github.com/Amandabezsiv',
+        'Crypto Dashboard is an interactive app that tracks real-time crypto prices using a Flask API, CoinGecko integration, WebSocket, and a React frontend.',
+      technologies: ['Flask', 'React', 'WebSocket'],
+      github: 'https://github.com/Amandabezsiv/crypto-dashboard',
+      demo: 'https://github.com/Amandabezsiv/crypto-dashboard',
     },
     {
-      title: 'Microservices Architecture',
+      title: 'CRUD Flask',
       description:
-        'Scalable microservices system with API gateway, service discovery, and monitoring.',
-      technologies: ['FastAPI', 'Docker', 'PostgreSQL', 'AWS'],
-      github: 'https://github.com/Amandabezsiv',
-      demo: 'https://github.com/Amandabezsiv',
+        'This project is a simple CRUD (Create, Read, Update, Delete) application built using Flask, a Python web framework. It demonstrates basic operations with a MySQL database, allowing management of customers, products, orders, and order items.',
+      technologies: ['Flask', 'MySQL', 'Docker', 'HTML5', 'CSS'],
+      github: 'https://github.com/Amandabezsiv/CRUD_Flask',
+      demo: 'https://github.com/Amandabezsiv/CRUD_Flask',
     },
   ]
 
@@ -247,11 +247,11 @@ export default function Portfolio() {
                   </div>
                 </div>
                 <div className="relative">
-                  <div className="w-64 h-64 mx-auto bg-gradient-to-br from-purple-600 to-blue-600 rounded-full flex items-center justify-center">
+                  <div className="w-64 h-64 mx-auto bg-gradient-to-br from-purple-600 to-blue-600 rounded-full flex items-center justify-center transition-all duration-500  hover:scale-105 ">
                     <img
                       src={profileImg.src}
                       alt="Amanda Bezerra"
-                      className="w-full h-full object-cover rounded-full transition-transform duration-500 hover:scale-105"
+                      className="w-60 h-60 rounded-full object-cover border-4 border-white shadow-lg transition-transform duration-500"
                     />
                   </div>
                   <div />
@@ -265,7 +265,7 @@ export default function Portfolio() {
         <section id="skills" className="py-16 bg-gray-800">
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto">
-              <div className="text-center mb-12">
+              <div className="text-center mb-12 animate-fade-in-up">
                 <h2 className="text-4xl font-bold mb-4">
                   Skills & Technologies
                 </h2>
@@ -296,11 +296,12 @@ export default function Portfolio() {
                         'REST APIs',
                         'Redis',
                         'OAuth2 / JWT',
-                      ].map((skill) => (
+                      ].map((skill, i) => (
                         <Badge
                           key={skill}
                           variant="secondary"
-                          className="bg-purple-600/20 text-purple-300"
+                          className="bg-purple-600/20 text-purple-300 animate-fade-in-up"
+                          style={{ animationDelay: `${i * 0.07}s` }}
                         >
                           {skill}
                         </Badge>
@@ -325,11 +326,12 @@ export default function Portfolio() {
                         'CSS3',
                         'Tailwind CSS',
                         'Next.js',
-                      ].map((skill) => (
+                      ].map((skill, i) => (
                         <Badge
                           key={skill}
                           variant="secondary"
-                          className="bg-purple-600/20 text-purple-300"
+                          className="bg-purple-600/20 text-purple-300 animate-fade-in-up"
+                          style={{ animationDelay: `${i * 0.07}s` }}
                         >
                           {skill}
                         </Badge>
@@ -360,11 +362,12 @@ export default function Portfolio() {
                         'MySQL',
                         'MongoDB',
                         'Redis',
-                      ].map((skill) => (
+                      ].map((skill, i) => (
                         <Badge
                           key={skill}
                           variant="secondary"
-                          className="bg-purple-600/20 text-purple-300"
+                          className="bg-purple-600/20 text-purple-300 animate-fade-in-up"
+                          style={{ animationDelay: `${i * 0.07}s` }}
                         >
                           {skill}
                         </Badge>
@@ -381,7 +384,7 @@ export default function Portfolio() {
         <section id="projects" className="py-16 bg-gray-900">
           <div className="container mx-auto px-4">
             <div className="max-w-6xl mx-auto">
-              <div className="text-center mb-12">
+              <div className="text-center mb-12 animate-fade-in-up">
                 <h2 className="text-4xl font-bold mb-4">Featured Projects</h2>
                 <div className="w-20 h-1 bg-purple-600 mx-auto mb-8" />
                 <p className="text-xl text-gray-300">
@@ -452,7 +455,7 @@ export default function Portfolio() {
         <section id="contact" className="py-16 bg-gray-800">
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto">
-              <div className="text-center mb-12">
+              <div className="text-center mb-12 animate-fade-in-up">
                 <h2 className="text-4xl font-bold mb-4">Get In Touch</h2>
                 <div className="w-20 h-1 bg-purple-600 mx-auto mb-8" />
                 <p className="text-xl text-gray-300">
