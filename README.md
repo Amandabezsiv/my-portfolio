@@ -1,6 +1,7 @@
 # Amanda Bezerra | Portfolio
 
 This is the source code for my personal portfolio, built with **Next.js**, **React**, and **Tailwind CSS**.
+You can visit the live portfolio [here](https://amandabezsilv.vercel.app).
 
 ## How to Run
 
